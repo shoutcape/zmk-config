@@ -9,10 +9,13 @@
 
 / {
     macros {
-        FHoldCaps: FHoldCaps {
+        Tilde: FHoldCaps {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F>, <&macro_tap_time 150>, <&kp CAPS>;
+            bindings =
+                <&kp LS(NUMBER_0)>,
+                <&macro_tap_time 150>,
+                <&kp RA(RIGHT_BRACKET) &kp SPACE>;
 
             label = "FHOLDCAPS";
         };
@@ -44,10 +47,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE  &kp LS(MINUS)                  &kp LS(NUMBER_1)               &kp LS(NUMBER_2)                           &kp LS(NUMBER_3)               &mt RA(RIGHT_BRACKET) LS(NUMBER_0)    &kp SLASH     &kp NUMBER_7   &kp N8        &kp N9        &kp LC(PLUS)                 &trans
-&kp CAPS    &mt RA(NUMBER_4) LS(NUMBER_5)  &mt RA(NUMBER_0) RA(NUMBER_7)  &mt RA(NUMBER_9) RA(NUMBER_8)              &mt LS(NUMBER_9) LS(NUMBER_8)  &mt RA(MINUS) LS(NUMBER_7)            &kp MINUS     &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &mt LC(SLASH) LC(SEMICOLON)  &trans
-&mo 5       &mt LS(NUMBER_6) GRAVE         &kp NON_US_HASH                &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &kp RA(NUMBER_2)               &mt RA(NON_US_BACKSLASH) LGUI         &kp ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp COMMA                    &kp LS(GRAVE)
-                                                                          &kp DEL                                    &mt LA(F4) DELETE              &trans                                &kp RET       &kp BACKSPACE  &kp NUMBER_0
+&kp ESCAPE  &kp LS(MINUS)                  &kp LS(NUMBER_1)               &kp LS(NUMBER_2)                           &kp LS(NUMBER_3)               &Tilde                           &kp SLASH     &kp NUMBER_7   &kp N8        &kp N9        &kp LC(PLUS)                 &trans
+&kp CAPS    &mt RA(NUMBER_4) LS(NUMBER_5)  &mt RA(NUMBER_0) RA(NUMBER_7)  &mt RA(NUMBER_9) RA(NUMBER_8)              &mt LS(NUMBER_9) LS(NUMBER_8)  &mt RA(MINUS) LS(NUMBER_7)       &kp MINUS     &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &mt LC(SLASH) LC(SEMICOLON)  &trans
+&mo 5       &mt LS(NUMBER_6) GRAVE         &kp NON_US_HASH                &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &kp RA(NUMBER_2)               &mt RA(NON_US_BACKSLASH) LGUI    &kp ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp COMMA                    &kp LS(GRAVE)
+                                                                          &kp DEL                                    &mt LA(F4) DELETE              &trans                           &kp RET       &kp BACKSPACE  &kp NUMBER_0
             >;
         };
 
