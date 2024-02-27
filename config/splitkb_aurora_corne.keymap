@@ -13,6 +13,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_tap>,
                 <&kp LS(NUMBER_0)>,
                 <&macro_tap_time 150>,
                 <&kp RA(RIGHT_BRACKET) &kp SPACE>;
