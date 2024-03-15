@@ -16,6 +16,13 @@
             bindings = <&kp RA(RIGHT_BRACKET) &kp SPACE>;
             label = "TILDE";
         };
+
+        html_tag_vim: html_tag_vim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp S &kp L &kp NON_US_BACKSLASH>;
+            label = "HTML_TAG_VIM";
+        };
     };
 
     behaviors {
@@ -80,10 +87,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB         &trans  &kp HOME  &kp UP        &kp END              &kp PAGE_UP      &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &trans  &kp LC(LA(F4))
-&kp LEFT_SHIFT  &trans  &kp LEFT  &kp DOWN      &kp RIGHT            &kp PAGE_DOWN    &kp F16           &kp F17           &kp F18           &trans            &trans  &kp F24
-&kp LCTRL       &trans  &trans    &trans        &kp LC(NON_US_HASH)  &kp LGUI         &kp LC(Z)         &kp LC(Y)         &mo 4             &trans            &trans  &kp LC(F4)
-                                  &kp LEFT_ALT  &kp SPACE            &kp DEL          &kp RET           &trans            &trans
+&kp TAB         &trans  &kp HOME  &kp UP         &kp END              &kp PAGE_UP      &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &trans  &kp LC(LA(F4))
+&kp LEFT_SHIFT  &trans  &kp LEFT  &kp DOWN       &kp RIGHT            &kp PAGE_DOWN    &kp F16           &kp F17           &kp F18           &trans            &trans  &kp F24
+&kp LCTRL       &trans  &trans    &html_tag_vim  &kp LC(NON_US_HASH)  &kp LGUI         &kp LC(Z)         &kp LC(Y)         &mo 4             &trans            &trans  &kp LC(F4)
+                                  &kp LEFT_ALT   &kp SPACE            &kp DEL          &kp RET           &trans            &trans
             >;
         };
 
