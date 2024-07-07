@@ -114,7 +114,7 @@
 
         layer_5 {
             bindings = <
-&kp LC(LS(ESCAPE))  &trans            &trans  &trans         &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(LS(ESCAPE))  &trans            &trans  &trans         &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &kp LA(LC(F4))
 &trans              &kp RA(NUMBER_5)  &trans  &trans         &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &trans
 &trans              &trans            &trans  &kp LS(EQUAL)  &kp LS(RIGHT_BRACKET)  &kp RA(BACKSLASH)    &trans  &trans  &trans  &trans  &trans  &trans
                                               &trans         &trans                 &trans               &trans  &trans  &trans
