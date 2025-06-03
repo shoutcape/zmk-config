@@ -180,9 +180,9 @@
         MacOs_1 {
             display-name = "MacOs 1";
             bindings = <
-&kp ESCAPE  &kp LS(MINUS)                  &kp LS(NUMBER_1)           &kp LS(NUMBER_2)                           &kp LS(NUMBER_3)               &new_behavior 0 LS(NUMBER_0)    &kp SLASH        &kp NUMBER_7   &kp N8        &kp N9        &kp LC(MINUS)                &trans
-&kp CAPS    &mt RA(NUMBER_4) LS(NUMBER_5)  &mt RA(LS(N9)) RA(LS(N8))  &mt RA(NUMBER_9) RA(NUMBER_8)              &mt LS(NUMBER_9) LS(NUMBER_8)  &mt RA(LS(N7)) LS(NUMBER_7)     &kp MINUS        &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &mt LC(SLASH) LC(SEMICOLON)  &trans
-&mo 5       &mt LS(NUMBER_6) GRAVE         &kp NON_US_HASH            &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &kp RA(NUMBER_2)               &mt RA(N0) LGUI                 &kp KP_ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp COMMA                    &kp LS(GRAVE)
+&kp ESCAPE  &kp LS(MINUS)                  &kp LS(NUMBER_1)           &kp LS(NUMBER_2)                           &kp LS(NUMBER_3)               &new_behavior 0 LS(NUMBER_0)    &kp SLASH        &kp NUMBER_7   &kp N8        &kp N9        &kp LG(KP_PLUS)              &trans
+&kp CAPS    &mt RA(NUMBER_4) LS(NUMBER_5)  &mt RA(LS(N9)) RA(LS(N8))  &mt RA(NUMBER_9) RA(NUMBER_8)              &mt LS(NUMBER_9) LS(NUMBER_8)  &mt RA(LS(N7)) LS(NUMBER_7)     &kp MINUS        &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &mt LG(MINUS) LC(SEMICOLON)  &trans
+&mo 5       &mt LS(NUMBER_6) GRAVE         &kp NON_US_HASH            &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &kp RA(NUMBER_2)               &mt LGUI LA(N7)                 &kp KP_ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp COMMA                    &kp LS(GRAVE)
                                                                       &mt LA(F4) DELETE                          &kp DELETE                     &trans                          &kp RET          &kp BACKSPACE  &kp NUMBER_0
             >;
         };
@@ -204,6 +204,16 @@
 &kp LEFT_SHIFT  &trans  &trans  &trans        &trans     &trans           &kp F5  &kp F6   &kp F7   &kp F8   &kp C_MUTE      &kp C_PLAY
 &kp LCTRL       &trans  &trans  &trans        &kp LG(V)  &kp LC(LG(V))    &kp F9  &kp F10  &kp F11  &kp F12  &trans          &trans
                                 &kp LEFT_ALT  &kp SPACE  &trans           &trans  &trans   &to 0
+            >;
+        };
+
+        MacOs_4 {
+            display-name = "MacOs 4";
+            bindings = <
+&kp LC(LS(ESCAPE))  &trans            &trans  &trans         &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &kp LA(LC(F4))
+&trans              &kp LS(NUMBER_4)  &trans  &trans         &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&trans              &trans            &trans  &kp LS(EQUAL)  &kp LS(RIGHT_BRACKET)  &kp RA(BACKSLASH)    &trans  &trans  &trans  &trans  &trans  &trans
+                                              &trans         &trans                 &trans               &trans  &trans  &trans
             >;
         };
     };
