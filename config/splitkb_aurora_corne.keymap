@@ -190,9 +190,9 @@
         MacOs_2 {
             display-name = "MacOs 2";
             bindings = <
-&kp TAB         &trans  &kp LG(LEFT)  &kp UP        &kp LG(RIGHT_ARROW)  &kp PAGE_UP      &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LG(LS(T))    &kp LG(W)
-&kp LEFT_SHIFT  &trans  &kp LEFT      &kp DOWN      &kp RIGHT            &kp PAGE_DOWN    &kp F16           &kp F17           &kp F18           &trans            &kp LS(LC(TAB))  &kp LC(TAB)
-&kp LCTRL       &trans  &trans        &trans        &kp LC(NON_US_HASH)  &kp LGUI         &kp LG(Z)         &kp LS(LG(Z))     &trans            &trans            &trans           &kp LC(F4)
+&kp TAB         &trans  &kp LG(LEFT)  &kp UP        &kp LG(RIGHT_ARROW)  &kp PAGE_UP      &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(N5)  &kp LG(LS(T))    &kp LG(W)
+&kp LEFT_SHIFT  &trans  &kp LEFT      &kp DOWN      &kp RIGHT            &kp PAGE_DOWN    &kp F16           &kp F17           &kp F18           &trans      &kp LS(LC(TAB))  &kp LC(TAB)
+&kp LCTRL       &trans  &trans        &trans        &kp LC(NON_US_HASH)  &kp LGUI         &kp LG(Z)         &kp LS(LG(Z))     &trans            &trans      &trans           &kp LC(F4)
                                       &kp LEFT_ALT  &kp SPACE            &kp DEL          &kp RET           &trans            &trans
             >;
         };
