@@ -200,10 +200,10 @@
         MacOs_3 {
             display-name = "MacOs 3";
             bindings = <
-&kp TAB         &trans  &trans  &kp LA(UP_ARROW)  &trans     &trans           &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PREVIOUS  &kp C_NEXT
-&kp LEFT_SHIFT  &trans  &trans  &kp LA(DOWN)      &trans     &trans           &kp F5  &kp F6   &kp F7   &kp F8   &kp C_MUTE      &kp C_PLAY
-&kp LCTRL       &trans  &trans  &trans            &trans     &kp LG(LS(V))    &kp F9  &kp F10  &kp F11  &kp F12  &trans          &trans
-                                &kp LEFT_ALT      &kp SPACE  &trans           &trans  &trans   &to 0
+&kp TAB         &trans  &trans              &kp LC(UP_ARROW)  &trans               &kp LA(UP_ARROW)      &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PREVIOUS  &kp C_NEXT
+&kp LEFT_SHIFT  &trans  &kp LC(LEFT_ARROW)  &kp LC(DOWN)      &kp LC(RIGHT_ARROW)  &kp LA(DOWN_ARROW)    &kp F5  &kp F6   &kp F7   &kp F8   &kp C_MUTE      &kp C_PLAY
+&kp LCTRL       &trans  &trans              &trans            &kp LS(LG(LC(F4)))   &kp LG(LS(V))         &kp F9  &kp F10  &kp F11  &kp F12  &trans          &trans
+                                            &kp LEFT_ALT      &kp SPACE            &trans                &trans  &trans   &to 0
             >;
         };
 
