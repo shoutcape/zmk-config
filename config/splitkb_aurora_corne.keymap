@@ -69,7 +69,7 @@
         lgui+bspace-delete-word {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <24 40>;
-            layers = <0>;
+            layers = <8>;
         };
     };
 
