@@ -208,6 +208,38 @@ Agents should prefer *real examples over abstract instructions*. ([The GitHub Bl
 * Always include build result in change description
 * Respect human review feedback
 
+### ⚠️ IMPORTANT: Always Require Confirmation
+
+**NEVER commit or push without explicit user confirmation.**
+
+Before running `git commit` or `git push`:
+
+1. Show the user what changes will be committed (`git status`, `git diff`)
+2. Explain what the commit will contain
+3. Propose a commit message
+4. **Wait for explicit user approval** before proceeding
+
+Example workflow:
+
+```
+Agent: I've made the following changes:
+- Modified file X
+- Added file Y
+
+Here's the diff: [show diff]
+
+I propose this commit message:
+"feature: add battery widget to display"
+
+Would you like me to commit and push these changes?
+
+User: yes
+
+Agent: [proceeds with commit and push]
+```
+
+This applies to ALL git operations that modify history or remote state.
+
 ---
 
 ## ✨ How to Interact with Agents
