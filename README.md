@@ -1,6 +1,11 @@
 # ZMK Config - Splitkb Aurora Corne
 
-Configuration for a wireless split keyboard with custom behaviors and display integration.
+Configuration for my wireless split keyboard with custom behaviors and display integration.
+
+<img
+  src="https://github.com/user-attachments/assets/047f85f6-19d1-4d18-9239-ad8dcc58da06"
+  width="600"
+/>
 
 ## Hardware
 
