@@ -33,28 +33,33 @@ Use and reference these commands when evaluating changes:
 
 ```bash
 # Build left half with display
-west build -d build/left -b nice_nano \
-  -- -DSHIELD=aurora_corne_left nice_view_custom
+west build -p always -d build/left -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_left nice_view_adapter nice_view"
 
 # Build right half with display
-west build -d build/right -b nice_nano \
-  -- -DSHIELD=aurora_corne_right nice_view_custom
+west build -p always -d build/right -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_right nice_view_adapter nice_view"
 
 # Headless left half
-west build -d build/left-headless -b nice_nano \
-  -- -DSHIELD=aurora_corne_left
+west build -p always -d build/left-headless -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_left"
 
 # Headless right half
-west build -d build/right-headless -b nice_nano \
-  -- -DSHIELD=aurora_corne_right
+west build -p always -d build/right-headless -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_right"
 ```
 
 ### 🧪 LVGL / UI Refresh Tests
 
 ```bash
 # Validate LVGL compilation
-west build -p always -b nice_nano -- \
-  -DSHIELD=aurora_corne_left nice_view_custom
+west build -p always -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_left nice_view_adapter nice_view"
 ```
 
 These commands are primary helpers you can run to verify correctness and catch errors early. ([The GitHub Blog][1])
@@ -69,9 +74,8 @@ These commands are primary helpers you can run to verify correctness and catch e
 
 * `/boards/shields/`
 
-  * `aurora_corne_left/`
-  * `aurora_corne_right/`
-  * `nice_view_custom/` (custom display shield)
+  * `nice_view/` (customized nice!view UI)
+  * `nice_view_adapter/` (nice!view adapter overrides)
 
 * `/modules/`
 
@@ -81,7 +85,7 @@ These commands are primary helpers you can run to verify correctness and catch e
 
   * Central build configuration
 
-* `west.yml`
+* `config/west.yml`
 
   * Modules + dependencies
 
@@ -94,8 +98,8 @@ Keep this structure consistent. Do **not** move core ZMK files into project spac
 Use consistent names:
 
 * Board: `nice_nano`
-* Keyboard shields: `aurora_corne_left`, `aurora_corne_right`
-* Display shield: `nice_view_custom`
+* Keyboard shields: `splitkb_aurora_corne_left`, `splitkb_aurora_corne_right`
+* Display shields: `nice_view_adapter`, `nice_view`
 * UI module(s): e.g., `ui_battery_widget`, `ui_layer_indicator`
 
 Example `build.yaml` snippet:
@@ -103,7 +107,7 @@ Example `build.yaml` snippet:
 ```yaml
 include:
   - board: nice_nano
-    shield: aurora_corne_left nice_view_custom
+    shield: splitkb_aurora_corne_left nice_view_adapter nice_view
 ```
 
 ---

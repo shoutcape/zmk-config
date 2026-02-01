@@ -1,0 +1,35 @@
+# ZMK / Zephyr west workspace
+/.west/
+
+# Build outputs
+/build/
+/build-*/
+
+# West-managed checkouts (keep your config in /config)
+/modules/
+/zephyr/
+/zmk/
+/nice-view-mod/
+/optional/
+
+# Tooling / IDE
+/.cache/
+/.venv/
+/.python-version
+/.vscode/
+/.idea/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Common generated artifacts
+*.log
+*.tmp
+*.uf2
+*.hex
+*.bin
+compile_commands.json

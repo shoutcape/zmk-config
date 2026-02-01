@@ -68,6 +68,63 @@ Switch between OS layouts using layer toggles on Layer 3.
 
 Firmware builds automatically via GitHub Actions on push to `main`. Download artifacts from the Actions tab.
 
+### Local builds
+
+This repo is a full west workspace (Zephyr + ZMK + modules). For local builds you need:
+
+- `west`
+- Zephyr SDK (toolchain)
+- Host tools like `cmake` and `ninja`
+
+One-time setup (from the repo root):
+
+```bash
+west init -l config
+west update
+west zephyr-export
+```
+
+If you installed `west` via `pip`/`pipx`, you may need `pyelftools` for the build scripts:
+
+```bash
+pipx inject west pyelftools
+```
+
+Make sure Zephyr can find your toolchain (example path shown):
+
+```bash
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk
+```
+
+Build left + right (nice!view):
+
+```bash
+west build -p always -d build/left -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_left nice_view_adapter nice_view"
+
+west build -p always -d build/right -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_right nice_view_adapter nice_view"
+```
+
+Headless builds:
+
+```bash
+west build -p always -d build/left-headless -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_left"
+
+west build -p always -d build/right-headless -b nice_nano -s zmk/app -- \
+  -DZMK_CONFIG="$PWD/config" \
+  -DSHIELD="splitkb_aurora_corne_right"
+```
+
+Firmware output:
+
+- `build/<target>/zephyr/zmk.uf2`
+
 ### Configuration
 - **Left half:** Studio enabled (`studio-rpc-usb-uart` + `CONFIG_ZMK_STUDIO=y`)
 - **Right half:** Standard build
