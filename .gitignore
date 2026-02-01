@@ -5,6 +5,9 @@
 /build/
 /build-*/
 
+# Local packaged artifacts
+/dist/
+
 # West-managed checkouts (keep your config in /config)
 /modules/
 /zephyr/

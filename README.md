@@ -125,6 +125,24 @@ Firmware output:
 
 - `build/<target>/zephyr/zmk.uf2`
 
+If you prefer a stable, easy-to-find output path for flashing, run:
+
+```bash
+./scripts/package-firmware.sh
+```
+
+Convenience (build both halves, then package to `dist/`):
+
+```bash
+./scripts/build-and-package.sh
+```
+
+This writes:
+
+- `dist/nice_nano-splitkb_aurora_corne_left.uf2`
+- `dist/nice_nano-splitkb_aurora_corne_right.uf2`
+- `dist/nice_nano-splitkb_aurora_corne-firmware.zip`
+
 ### Configuration
 - **Left half:** Studio enabled (`studio-rpc-usb-uart` + `CONFIG_ZMK_STUDIO=y`)
 - **Right half:** Standard build
