@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     macros {
@@ -148,7 +147,7 @@
         };
 
         layer_4 {
-            display-name = "Layer 4";
+            display-name = "Settings";
             bindings = <
 &trans  &trans  &trans  &trans      &trans      &trans        &trans  &trans  &trans  &trans       &trans  &trans
 &trans  &trans  &trans  &trans      &trans      &trans        &trans  &trans  &trans  &trans       &trans  &trans
@@ -170,20 +169,20 @@
         Gaming {
             display-name = "Gaming";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y      &kp U          &kp I           &kp O       &kp P          &rampytys
-&kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F      &kp G    &kp H      &kp J          &kp K           &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N      &kp M          &kp COMMA       &kp PERIOD  &kp SLASH      &to 0
-                                &kp LEFT_ALT  &kp SPACE  &mo 7    &kp ENTER  &kp BACKSPACE  &msc SCRL_DOWN
+&kp TAB           &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y      &kp U          &kp I      &kp O       &kp P          &trans
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F      &kp G    &kp H      &kp J          &kp K      &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N      &kp M          &kp COMMA  &kp PERIOD  &kp SLASH      &mo 7
+                                &kp LEFT_ALT  &kp SPACE  &mo 7    &kp ENTER  &kp BACKSPACE  &trans
             >;
         };
 
         Gaming_1 {
             display-name = "Gaming 1";
             bindings = <
-&kp ESCAPE  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans      &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans        &kp NUMBER_4  &kp NUMBER_5    &trans      &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &kp F5  &kp J         &kp I         &kp M           &trans      &trans  &trans  &trans  &trans  &trans
-                            &trans        &trans        &trans          &rapidfire  &trans  &trans
+&kp ESCAPE  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans        &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &kp F5  &kp J         &kp I         &kp M           &trans  &trans  &trans  &trans  &mo 4   &trans
+                            &trans        &trans        &trans          &to 0   &to 13  &to 8
             >;
         };
 
@@ -222,8 +221,8 @@
             bindings = <
 &kp TAB         &trans  &trans              &kp LC(UP_ARROW)  &trans                    &kp LA(UP_ARROW)      &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PREVIOUS  &kp C_NEXT
 &kp LEFT_SHIFT  &trans  &kp LC(LEFT_ARROW)  &kp LC(DOWN)      &kp LC(RIGHT_ARROW)       &kp LA(DOWN_ARROW)    &kp F5  &kp F6   &kp F7   &kp F8   &kp C_MUTE      &kp C_PLAY
-&kp LCTRL       &trans  &trans              &kp LS(LG(N5))    &kp LS(LG(LC(NUMBER_4)))  &kp LG(LS(LA(V)))     &kp F9  &kp F10  &kp F11  &kp F12  &trans          &trans
-                                            &kp LEFT_ALT      &kp SPACE                 &trans                &trans  &trans   &to 0
+&kp LCTRL       &trans  &trans              &kp LS(LG(N5))    &kp LS(LG(LC(NUMBER_4)))  &kp LG(LS(LA(V)))     &kp F9  &kp F10  &kp F11  &kp F12  &mo 4           &trans
+                                            &kp LEFT_ALT      &kp SPACE                 &trans                &to 6   &to 13   &to 0
             >;
         };
 
@@ -272,8 +271,8 @@
             bindings = <
 &kp TAB         &trans  &trans              &kp LC(UP_ARROW)  &trans                    &kp LA(UP_ARROW)      &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PREVIOUS  &kp C_NEXT
 &kp LEFT_SHIFT  &trans  &kp LC(LEFT_ARROW)  &kp LC(DOWN)      &kp LC(RIGHT_ARROW)       &kp LA(DOWN_ARROW)    &kp F5  &kp F6   &kp F7   &kp F8   &kp C_MUTE      &kp C_PLAY
-&kp LCTRL       &trans  &trans              &kp LS(LG(N5))    &kp LS(LG(LC(NUMBER_4)))  &kp LG(LS(LA(V)))     &kp F9  &kp F10  &kp F11  &kp F12  &trans          &trans
-                                            &kp LEFT_ALT      &kp SPACE                 &trans                &trans  &trans   &to 0
+&kp LCTRL       &trans  &trans              &kp LS(LG(N5))    &kp LS(LG(LC(NUMBER_4)))  &kp LG(LS(LA(V)))     &kp F9  &kp F10  &kp F11  &kp F12  &mo 4           &trans
+                                            &kp LEFT_ALT      &kp SPACE                 &trans                &to 6   &to 0    &to 8
             >;
         };
 
