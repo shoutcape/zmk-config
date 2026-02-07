@@ -239,10 +239,10 @@
         Linux_1 {
             display-name = "Linux 1";
             bindings = <
-&kp ESCAPE  &kp LS(MINUS)                  &kp LS(NUMBER_1)               &kp LS(NUMBER_2)                           &kp LS(NUMBER_3)                &equals_tilde 0 LS(NUMBER_0)     &kp SLASH        &kp NUMBER_7   &kp N8        &kp N9        &kp LC(MINUS)  &trans
-&kp CAPS    &mt RA(NUMBER_4) LS(NUMBER_5)  &mt RA(NUMBER_0) RA(NUMBER_7)  &mt RA(NUMBER_9) RA(NUMBER_8)              &mt LS(NUMBER_9) LS(NUMBER_8)   &mt RA(MINUS) LS(NUMBER_7)       &kp MINUS        &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp LC(SLASH)  &trans
-&mo 16      &mt LS(NUMBER_6) GRAVE         &kp NON_US_HASH                &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &mt LG(LA(LS(V))) RA(NUMBER_2)  &mt LG(LA(V)) RA(NON_US_BSLH)    &kp KP_ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp COMMA      &kp LS(GRAVE)
-                                                                          &mt LEFT_ALT DELETE                        &kp DELETE                      &trans                           &kp RET          &kp BACKSPACE  &kp NUMBER_0
+&kp ESCAPE  &kp LS(MINUS)                  &kp LS(NUMBER_1)               &kp LS(NUMBER_2)                           &kp LS(NUMBER_3)               &equals_tilde 0 LS(NUMBER_0)     &kp SLASH        &kp NUMBER_7   &kp N8        &kp N9        &kp LC(MINUS)  &trans
+&kp CAPS    &mt RA(NUMBER_4) LS(NUMBER_5)  &mt RA(NUMBER_0) RA(NUMBER_7)  &mt RA(NUMBER_9) RA(NUMBER_8)              &mt LS(NUMBER_9) LS(NUMBER_8)  &mt RA(MINUS) LS(NUMBER_7)       &kp MINUS        &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp LC(SLASH)  &trans
+&mo 16      &mt LS(NUMBER_6) GRAVE         &kp NON_US_HASH                &mt LS(NON_US_BACKSLASH) NON_US_BACKSLASH  &mt LG(LA(T)) RA(NUMBER_2)     &mt LG(LA(V)) RA(NON_US_BSLH)    &kp KP_ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp COMMA      &kp LS(GRAVE)
+                                                                          &mt LEFT_ALT DELETE                        &kp DELETE                     &trans                           &kp RET          &kp BACKSPACE  &kp NUMBER_0
             >;
         };
 
