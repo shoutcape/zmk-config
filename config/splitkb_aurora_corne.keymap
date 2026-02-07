@@ -269,10 +269,10 @@
         Linux_4 {
             display-name = "Linux 4";
             bindings = <
-&kp LC(LS(ESCAPE))  &trans            &trans  &trans         &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &kp LA(LC(F4))
-&trans              &kp LS(NUMBER_4)  &trans  &trans         &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans            &trans  &kp LS(EQUAL)  &kp LS(RIGHT_BRACKET)  &kp RA(BACKSLASH)    &trans  &trans  &trans  &trans  &trans  &trans
-                                              &trans         &trans                 &trans               &trans  &trans  &trans
+&kp LC(LS(ESCAPE))  &trans            &trans  &trans         &trans                 &trans               &trans  &trans            &trans            &trans            &trans  &kp LA(LC(F4))
+&kp LEFT_SHIFT      &kp RA(NUMBER_5)  &trans  &trans         &trans                 &trans               &trans  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &trans            &trans  &trans
+&trans              &trans            &trans  &kp LS(EQUAL)  &kp LS(RIGHT_BRACKET)  &kp RA(BACKSLASH)    &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans
+                                              &trans         &trans                 &trans               &trans  &trans            &trans
             >;
         };
 
