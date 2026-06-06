@@ -36,3 +36,4 @@ Thumbs.db
 *.hex
 *.bin
 compile_commands.json
+/docs/superpowers
