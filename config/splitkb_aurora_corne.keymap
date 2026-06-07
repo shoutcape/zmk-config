@@ -129,9 +129,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB         &trans  &kp HOME  &kp UP         &kp END              &kp PAGE_UP      &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &trans  &trans
-&kp LEFT_SHIFT  &trans  &kp LEFT  &kp DOWN       &kp RIGHT            &kp PAGE_DOWN    &kp F16           &kp F17           &kp F18           &trans            &trans  &kp F24
-&kp LCTRL       &trans  &trans    &html_tag_vim  &kp LC(NON_US_HASH)  &kp LGUI         &kp LC(Z)         &kp LC(Y)         &mo 17            &trans            &trans  &kp LC(F4)
+&kp TAB         &trans  &kp HOME  &kp UP         &kp END              &kp PAGE_UP      &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &trans           &kp LC(W)
+&kp LEFT_SHIFT  &trans  &kp LEFT  &kp DOWN       &kp RIGHT            &kp PAGE_DOWN    &kp F16           &kp F17           &kp F18           &trans            &kp LS(LC(TAB))  &kp LC(TAB)
+&kp LCTRL       &trans  &trans    &html_tag_vim  &kp LC(NON_US_HASH)  &kp LGUI         &kp LC(Z)         &kp LC(Y)         &mo 17            &trans            &trans           &trans
                                   &kp LEFT_ALT   &kp SPACE            &kp DEL          &kp RET           &trans            &trans
             >;
         };
