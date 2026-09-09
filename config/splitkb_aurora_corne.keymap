@@ -27,9 +27,10 @@
         rapidfire: rapidfire {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E>;
+            bindings = <&kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E>;
             label = "RAPIDFIRE";
-            wait-ms = <6>;
+            wait-ms = <7>;
+            tap-ms = <6>;
         };
 
         rampytys: rampytys {
