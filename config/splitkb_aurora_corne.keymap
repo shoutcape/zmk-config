@@ -39,7 +39,7 @@
             #binding-cells = <0>;
             label = "RAPIDFIRE";
             keycode = <E>;
-            tap-ms = <4>;
+            tap-ms = <1>;
             wait-ms = <4>;
         };
 
