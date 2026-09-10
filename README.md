@@ -23,9 +23,9 @@ the repeat and releases `E` if it is currently down. A quick tap sends one press
 **Usage:** `&rapidfire`
 
 Implemented locally in `modules/rapidfire/`, independent of display support.
-Adjust `tap-ms` (currently 6) and `wait-ms` (currently 7) in the keymap to change
-the press duration and gap. Both must be positive. Actual speed depends on
-firmware scheduling and USB/BLE transport; increase these values if the game
+Adjust `tap-ms` (currently 1) and `wait-ms` (currently 1) in the keymap to change
+the press duration and gap. Both must be positive. Actual speed is capped by the
+BLE connection interval, not just these values; increase them if the game
 misses taps. Use this behavior at one key position per instance.
 
 ### `LaltBackspace`
