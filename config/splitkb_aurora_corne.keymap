@@ -39,8 +39,8 @@
             #binding-cells = <0>;
             label = "RAPIDFIRE";
             keycode = <E>;
-            tap-ms = <1>;
-            wait-ms = <1>;
+            tap-ms = <4>;
+            wait-ms = <4>;
         };
 
         equals_tilde: equals_tilde {
