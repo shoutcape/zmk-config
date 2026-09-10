@@ -24,15 +24,6 @@
             label = "HTML_TAG_VIM";
         };
 
-        rapidfire: rapidfire {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E &kp E>;
-            label = "RAPIDFIRE";
-            wait-ms = <7>;
-            tap-ms = <6>;
-        };
-
         rampytys: rampytys {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -43,6 +34,15 @@
     };
 
     behaviors {
+        rapidfire: rapidfire {
+            compatible = "zmk,behavior-rapidfire";
+            #binding-cells = <0>;
+            label = "RAPIDFIRE";
+            keycode = <E>;
+            tap-ms = <6>;
+            wait-ms = <7>;
+        };
+
         equals_tilde: equals_tilde {
             compatible = "zmk,behavior-hold-tap";
             label = "EQUALS_TILDE";

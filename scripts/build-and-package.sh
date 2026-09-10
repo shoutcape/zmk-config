@@ -20,10 +20,12 @@ fi
 
 west build -p always -d build/left -b nice_nano -s zmk/app -- \
   -DZMK_CONFIG="$PWD/config" \
+  -DZMK_EXTRA_MODULES="$PWD" \
   -DSHIELD="splitkb_aurora_corne_left nice_view_adapter nice_view"
 
 west build -p always -d build/right -b nice_nano -s zmk/app -- \
   -DZMK_CONFIG="$PWD/config" \
+  -DZMK_EXTRA_MODULES="$PWD" \
   -DSHIELD="splitkb_aurora_corne_right nice_view_adapter nice_view"
 
 ./scripts/package-firmware.sh

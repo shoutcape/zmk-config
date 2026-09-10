@@ -16,6 +16,18 @@ Configuration for my wireless split keyboard with custom behaviors and display i
 
 ## Custom Behaviors
 
+### `rapidfire`
+Hold the top-right key on Gaming 1 to repeatedly tap `E`. Releasing it stops
+the repeat and releases `E` if it is currently down. A quick tap sends one press.
+
+**Usage:** `&rapidfire`
+
+Implemented locally in `modules/rapidfire/`, independent of display support.
+Adjust `tap-ms` (currently 6) and `wait-ms` (currently 7) in the keymap to change
+the press duration and gap. Both must be positive. Actual speed depends on
+firmware scheduling and USB/BLE transport; increase these values if the game
+misses taps. Use this behavior at one key position per instance.
+
 ### `LaltBackspace`
 Backspace key that morphs to Option+Backspace when Command is held. Enables word deletion on macOS without triggering the default Cmd+Backspace behavior.
 
@@ -102,10 +114,12 @@ Build left + right (nice!view):
 ```bash
 west build -p always -d build/left -b nice_nano -s zmk/app -- \
   -DZMK_CONFIG="$PWD/config" \
+  -DZMK_EXTRA_MODULES="$PWD" \
   -DSHIELD="splitkb_aurora_corne_left nice_view_adapter nice_view"
 
 west build -p always -d build/right -b nice_nano -s zmk/app -- \
   -DZMK_CONFIG="$PWD/config" \
+  -DZMK_EXTRA_MODULES="$PWD" \
   -DSHIELD="splitkb_aurora_corne_right nice_view_adapter nice_view"
 ```
 
@@ -114,10 +128,12 @@ Headless builds:
 ```bash
 west build -p always -d build/left-headless -b nice_nano -s zmk/app -- \
   -DZMK_CONFIG="$PWD/config" \
+  -DZMK_EXTRA_MODULES="$PWD" \
   -DSHIELD="splitkb_aurora_corne_left"
 
 west build -p always -d build/right-headless -b nice_nano -s zmk/app -- \
   -DZMK_CONFIG="$PWD/config" \
+  -DZMK_EXTRA_MODULES="$PWD" \
   -DSHIELD="splitkb_aurora_corne_right"
 ```
 

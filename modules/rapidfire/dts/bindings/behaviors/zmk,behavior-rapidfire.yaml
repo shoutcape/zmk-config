@@ -1,0 +1,16 @@
+description: Repeatedly tap a fixed keycode while the trigger is held
+compatible: "zmk,behavior-rapidfire"
+include: zero_param.yaml
+
+properties:
+  keycode:
+    type: int
+    required: true
+  tap-ms:
+    type: int
+    required: true
+    description: Duration of each key press in milliseconds (must be positive)
+  wait-ms:
+    type: int
+    required: true
+    description: Gap between key presses in milliseconds (must be positive)

@@ -1,3 +1,5 @@
 build:
+  cmake: modules/rapidfire
   settings:
     board_root: .
+    dts_root: modules/rapidfire
