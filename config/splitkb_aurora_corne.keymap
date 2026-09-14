@@ -40,7 +40,7 @@
             label = "RAPIDFIRE";
             keycode = <E>;
             tap-ms = <3>;
-            wait-ms = <8>;
+            wait-ms = <5>;
         };
 
         equals_tilde: equals_tilde {
