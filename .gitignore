@@ -1,6 +1,9 @@
 # ZMK / Zephyr west workspace
 /.west/
 
+# TreeMan worktrees
+/.worktrees/
+
 # Build outputs
 /build/
 /build-*/
